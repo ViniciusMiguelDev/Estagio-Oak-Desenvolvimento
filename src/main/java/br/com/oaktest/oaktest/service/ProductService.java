@@ -40,6 +40,7 @@ public class ProductService {
         if (optionalProduct.isPresent()) {
             Product existingProduct = optionalProduct.get();
             existingProduct.setName(product.getName());
+            existingProduct.setDescription(product.getDescription());
             existingProduct.setPrice(product.getPrice());
             existingProduct.setForSale(product.getForSale());
             return repository.save(existingProduct);
